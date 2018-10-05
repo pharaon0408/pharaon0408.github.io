@@ -1,0 +1,44 @@
+
+
+<h1 id="andrey"> hello, Andrey! </h1>
+
+<button onClick="sum()">summa</button>
+<div id='flashingtext'> textdemo </div>
+
+<div id='flashingtext2'> Andrey </div>
+
+<script>
+function sum(){
+  console.log('hello, Max!');
+  var number1 = 55;
+  var number2 = 10;
+  var number3 = 100;
+var basovayzVelich = 40;
+  var sum = (number1 + number2) * number2 - number3+basovayzVelich ;
+  var sum2 = (number1 + number2) * number2 + number3+basovayzVelich;
+  var sum3 = (number1 + number2) * number2 * number3+basovayzVelich;
+  var sum4 = (number1 + number2) * number2 / number3+basovayzVelich;
+  alert(sum);
+  console.log(sum, sum2, sum3, sum4);
+}
+
+
+function flashtext(ele,col) {
+    var tmpColCheck = document.getElementById( ele ).style.color;
+
+      if (tmpColCheck === 'silver') {
+        document.getElementById( ele ).style.color = col;
+      } else {
+        document.getElementById( ele ).style.color = 'silver';
+      }
+    } 
+
+    setInterval(function() {
+        flashtext('flashingtext','red');
+        flashtext('flashingtext2','blue');
+	flashtext('andrey','brown');
+        //flashtext('flashingtext3','green');
+    }, 500 ); //set an interval timer up to repeat the function
+
+
+</script>
